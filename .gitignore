@@ -1,0 +1,9 @@
+reports/*
+!reports/.gitkeep
+!reports/report.md
+!reports/report.json
+__pycache__/
+*.pyc
+.venv/
+.env
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nmaprun scanner="nmap" args="nmap -sV -oX demo_nmap.xml 192.168.1.10 192.168.1.20" start="1705500000" startstr="Fri Jan 17 2026 10:00:00 CET" version="7.94">
+  <host>
+    <status state="up" reason="syn-ack"/>
+    <address addr="192.168.1.10" addrtype="ipv4"/>
+    <hostnames>
+      <hostname name="demo-host-1" type="user"/>
+    </hostnames>
+    <ports>
+      <port protocol="tcp" portid="22">
+        <state state="open"/>
+        <service name="ssh" product="OpenSSH" version="8.9"/>
+      </port>
+      <port protocol="tcp" portid="80">
+        <state state="open"/>
+        <service name="http" product="nginx" version="1.18"/>
+      </port>
+      <port protocol="tcp" portid="445">
+        <state state="open"/>
+        <service name="microsoft-ds" product="Samba" version="4.15"/>
+      </port>
+    </ports>
+  </host>
+
+  <host>
+    <status state="up" reason="syn-ack"/>
+    <address addr="192.168.1.20" addrtype="ipv4"/>
+    <hostnames>
+      <hostname name="demo-host-2" type="user"/>
+    </hostnames>
+    <ports>
+      <port protocol="tcp" portid="3389">
+        <state state="open"/>
+        <service name="ms-wbt-server" product="Microsoft Terminal Services"/>
+      </port>
+      <port protocol="tcp" portid="443">
+        <state state="open"/>
+        <service name="https" product="Apache httpd" version="2.4"/>
+      </port>
+      <port protocol="tcp" portid="21">
+        <state state="open"/>
+        <service name="ftp" product="vsftpd" version="3.0.3"/>
+      </port>
+    </ports>
+  </host>
+</nmaprun>
+
