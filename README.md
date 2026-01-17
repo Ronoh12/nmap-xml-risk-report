@@ -35,8 +35,9 @@ nmap-xml-risk-report/
 ```bash
 python3 src/parse_nmap_xml.py --xml demo/demo_nmap.xml --out-md reports/risky_report.md --out-json reports/risky_report.json
 
-## 📊 Comparison: Clean vs Risky (Demo)
+## 📊 Comparison: Clean vs Risky (Auto-generated)
 
+<!-- COMPARISON_START -->
 | Metric | Risky Demo (`demo_nmap.xml`) | Clean Demo (`demo_nmap_clean.xml`) |
 |---|---:|---:|
 | Total hosts | 2 | 2 |
@@ -50,9 +51,14 @@ python3 src/parse_nmap_xml.py --xml demo/demo_nmap.xml --out-md reports/risky_re
 ### 🔥 Top High-Risk Ports (Risky Demo)
 | Port/Proto + Service | Count |
 |---|---:|
-| 21/tcp ftp | 1 |
-| 3389/tcp ms-wbt-server | 1 |
 | 445/tcp microsoft-ds | 1 |
+| 3389/tcp ms-wbt-server | 1 |
+| 21/tcp ftp | 1 |
 
-> Note: These numbers come from the included demo XML files and the heuristic risk model in `src/parse_nmap_xml.py`.
+> Auto-generated from demo XML files using the heuristic risk model.
+<!-- COMPARISON_END -->
+
+Run:
+```bash
+python3 src/generate_comparison.py
 
